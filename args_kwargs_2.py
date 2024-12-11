@@ -1,9 +1,9 @@
 # args kwargs 2
 
-def single_root_words(root_word, *args):  # первое слово в root_word остальные в *args
+def single_root_words(root_word, *other_words):  # первое слово в root_word остальные в *args
     same_words = []
     root = root_word.lower()  # приводим корень в ниж рег.
-    for word in args:
+    for word in other_words:
         word_l = word.lower()  # слово из args в ниж рег.
         if word_l in root or root in word_l:  # если есть одно в другом или другое в том, то
             same_words.append(word)
